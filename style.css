@@ -10,7 +10,7 @@ body {
     background-color: #131120;
     color: #d1d5db;
     line-height: 1.6;
-    overflow-x: hidden; /* Запобігає горизонтальній прокрутці на телефоні */
+    overflow-x: hidden;
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
     padding: 0 20px;
 }
 
-/* Секція Hero (про проєкт OBOZHE SciRise) */
+/* Секція Hero */
 .hero {
     text-align: center;
     padding: 80px 0;
@@ -45,39 +45,72 @@ body {
 }
 
 .project-description {
-    max-width: 650px; /* Трохи звузив, щоб квадрат виглядав акуратніше */
-    margin: 0 auto 40px auto;
+    max-width: 650px;
+    margin: 0 auto 20px auto;
     font-size: 1.1rem;
     color: #9ca3af;
-    text-align: justify; /* Робить рівні краї тексту з обох боків */
-    hyphens: auto; /* Дозволяє переноси слів, щоб не було гігантських пробілів */
+    text-align: justify;
+    hyphens: auto;
 }
 
-/* Строга кнопка Canva */
+/* =========================================
+   КНОПКИ ТА ЇХ КОНТЕЙНЕР
+   ========================================= */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
 .btn {
-    display: inline-block;
+    display: block;
+    width: 100%;
+    max-width: 350px;
     padding: 15px 30px;
-    border-radius: 4px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
     border: 1px solid transparent;
+    text-align: center;
 }
 
-.canva-btn {
+/* Спільний стиль для ПЕРШИХ ТРЬОХ кнопок */
+.github-btn, .canva-btn, .doc-btn {
     background-color: #6a4c9c;
     color: #ffffff;
     border-color: #8167ab;
 }
 
-.canva-btn:hover {
+/* Однаковий ефект наведення для перших трьох (строга тінь) */
+.github-btn:hover, .canva-btn:hover, .doc-btn:hover {
     background-color: #8167ab;
     border-color: #9d6fff;
     box-shadow: 4px 4px 0px rgba(157, 111, 255, 0.4); 
     transform: translate(-2px, -2px);
 }
 
-/* Секція команди */
+/* 4-та кнопка (Завантажити) - Базовий стан */
+.release-btn {
+    background-color: #6a4c9c;
+    color: #ffffff;
+    border-color: #8167ab;
+}
+
+/* ЕФЕКТ СВІТІННЯ для 4-ї кнопки */
+.release-btn:hover {
+    background-color: #8167ab;
+    border-color: #c4a5ff;
+    box-shadow: 0 0 15px rgba(157, 111, 255, 0.8), 
+                0 0 30px rgba(157, 111, 255, 0.5); 
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   СЕКЦІЯ КОМАНДИ
+   ========================================= */
 .team-section {
     padding: 80px 0;
     background-color: #131120;
@@ -99,7 +132,6 @@ body {
     gap: 30px;
 }
 
-/* Картка учасника */
 .team-card {
     background-color: #1b172a;
     border-radius: 4px;
@@ -162,31 +194,29 @@ body {
    АДАПТАЦІЯ ДЛЯ ПЛАНШЕТІВ ТА ТЕЛЕФОНІВ
    ========================================= */
 
-/* Планшети */
 @media (max-width: 900px) {
     .team-card {
-        width: calc(50% - 15px); /* Картки стають по 2 в ряд */
+        width: calc(50% - 15px);
     }
 }
 
-/* Телефони */
 @media (max-width: 600px) {
     .hero {
-        padding: 50px 0; /* Менші відступи зверху і знизу */
+        padding: 50px 0;
     }
 
     .project-name {
-        font-size: 2.2rem; /* Менший заголовок, щоб вліз на екран */
+        font-size: 2.2rem;
     }
 
     .team-card {
-        width: 100%; /* На телефоні картки стають по 1 в ряд */
+        width: 100%;
         max-width: 100%;
     }
 
     .project-description {
-        font-size: 1rem; /* Трохи менший шрифт для тексту */
-        text-align: justify; /* Залишаємо вирівнювання квадратом */
+        font-size: 1rem;
+        text-align: justify;
     }
     
     .section-title {
