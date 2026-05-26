@@ -1,0 +1,142 @@
+/* Базові налаштування */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0f172a; /* Глибокий темний колір */
+    color: #f8fafc;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Секція Hero (про проєкт) */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border-bottom: 1px solid #334155;
+}
+
+.team-name {
+    color: #38bdf8;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.project-name {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: -webkit-linear-gradient(#38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-description {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+/* Кнопка Canva */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.canva-btn {
+    background-color: #00c4cc; /* Фірмовий колір Canva */
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 196, 204, 0.3);
+}
+
+.canva-btn:hover {
+    background-color: #00a5ab;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 196, 204, 0.4);
+}
+
+/* Секція команди */
+.team-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #f8fafc;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Картка учасника */
+.team-card {
+    background-color: #1e293b;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    width: calc(33.333% - 20px);
+    min-width: 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #334155;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border-color: #38bdf8;
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #38bdf8;
+}
+
+.team-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.role {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #38bdf8;
+}
