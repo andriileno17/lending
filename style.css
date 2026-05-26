@@ -7,9 +7,10 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #131120; /* Глибокий темний фіолетовий з вашої презентації */
-    color: #d1d5db; /* Світло-сірий для тексту */
+    background-color: #131120;
+    color: #d1d5db;
     line-height: 1.6;
+    overflow-x: hidden; /* Запобігає горизонтальній прокрутці на телефоні */
 }
 
 .container {
@@ -22,12 +23,12 @@ body {
 .hero {
     text-align: center;
     padding: 80px 0;
-    background: linear-gradient(135deg, #1e1a3d 0%, #131120 100%); /* Глибокий фіолетовий градієнт, що відповідає презентації */
-    border-bottom: 1px solid #2d2445; /* Тонка темна фіолетова лінія */
+    background: linear-gradient(135deg, #1e1a3d 0%, #131120 100%);
+    border-bottom: 1px solid #2d2445;
 }
 
 .team-name {
-    color: #9d6fff; /* Насичений фіолетовий для акценту */
+    color: #9d6fff;
     font-size: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -38,23 +39,25 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 20px;
-    color: #f8fafc; /* Чисто білий, як на презентації */
+    color: #f8fafc;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .project-description {
-    max-width: 700px;
+    max-width: 650px; /* Трохи звузив, щоб квадрат виглядав акуратніше */
     margin: 0 auto 40px auto;
     font-size: 1.1rem;
-    color: #9ca3af; /* Сірий */
+    color: #9ca3af;
+    text-align: justify; /* Робить рівні краї тексту з обох боків */
+    hyphens: auto; /* Дозволяє переноси слів, щоб не було гігантських пробілів */
 }
 
 /* Строга кнопка Canva */
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    border-radius: 4px; /* Легке згладжування, менш заокруглене */
+    border-radius: 4px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.2s ease;
@@ -62,7 +65,7 @@ body {
 }
 
 .canva-btn {
-    background-color: #6a4c9c; /* Глибокий фіолетовий колір */
+    background-color: #6a4c9c;
     color: #ffffff;
     border-color: #8167ab;
 }
@@ -70,7 +73,6 @@ body {
 .canva-btn:hover {
     background-color: #8167ab;
     border-color: #9d6fff;
-    /* Жорстка "технічна" тінь замість м'якого розмиття */
     box-shadow: 4px 4px 0px rgba(157, 111, 255, 0.4); 
     transform: translate(-2px, -2px);
 }
@@ -99,15 +101,15 @@ body {
 
 /* Картка учасника */
 .team-card {
-    background-color: #1b172a; /* Трохи світліший темний фіолетовий, щоб виділятися */
-    border-radius: 4px; /* Менш заокруглене */
+    background-color: #1b172a;
+    border-radius: 4px;
     padding: 30px 20px;
     text-align: center;
     width: calc(33.333% - 20px);
     min-width: 250px;
     max-width: 300px;
     transition: all 0.2s ease;
-    border: 1px solid #2d2445; /* Строга рамка */
+    border: 1px solid #2d2445;
 }
 
 .team-card:hover {
@@ -116,20 +118,19 @@ body {
     transform: translate(-2px, -2px);
 }
 
-/* Фотографії тепер строгі і квадратні */
 .member-photo {
     width: 120px;
     height: 120px;
-    border-radius: 4px; /* Легке згладжування замість кола */
+    border-radius: 4px;
     object-fit: cover;
     margin-bottom: 20px;
     border: 2px solid #6a4c9c;
-    filter: grayscale(30%); /* Трохи знебарвлюємо фотки для строгості */
+    filter: grayscale(30%);
     transition: filter 0.3s ease;
 }
 
 .team-card:hover .member-photo {
-    filter: grayscale(0%); /* Колір повертається при наведенні */
+    filter: grayscale(0%);
 }
 
 .team-card h3 {
@@ -155,4 +156,40 @@ body {
 
 .social-links a:hover {
     color: #9d6fff;
+}
+
+/* =========================================
+   АДАПТАЦІЯ ДЛЯ ПЛАНШЕТІВ ТА ТЕЛЕФОНІВ
+   ========================================= */
+
+/* Планшети */
+@media (max-width: 900px) {
+    .team-card {
+        width: calc(50% - 15px); /* Картки стають по 2 в ряд */
+    }
+}
+
+/* Телефони */
+@media (max-width: 600px) {
+    .hero {
+        padding: 50px 0; /* Менші відступи зверху і знизу */
+    }
+
+    .project-name {
+        font-size: 2.2rem; /* Менший заголовок, щоб вліз на екран */
+    }
+
+    .team-card {
+        width: 100%; /* На телефоні картки стають по 1 в ряд */
+        max-width: 100%;
+    }
+
+    .project-description {
+        font-size: 1rem; /* Трохи менший шрифт для тексту */
+        text-align: justify; /* Залишаємо вирівнювання квадратом */
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
 }
