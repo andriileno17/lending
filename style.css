@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #0f172a; /* Глибокий темний колір */
-    color: #f8fafc;
+    background-color: #09090b; /* Майже суцільний чорний */
+    color: #d1d5db; /* Світло-сірий для тексту */
     line-height: 1.6;
 }
 
@@ -22,15 +22,15 @@ body {
 .hero {
     text-align: center;
     padding: 80px 0;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    border-bottom: 1px solid #334155;
+    background: linear-gradient(135deg, #13111c 0%, #09090b 100%);
+    border-bottom: 1px solid #2e2640; /* Темно-фіолетова лінія */
 }
 
 .team-name {
-    color: #38bdf8;
+    color: #8b5cf6; /* Приглушений фіолетовий */
     font-size: 1.2rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
@@ -38,50 +38,56 @@ body {
     font-size: 3.5rem;
     font-weight: 800;
     margin-bottom: 20px;
-    background: -webkit-linear-gradient(#38bdf8, #818cf8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #f3f4f6;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .project-description {
     max-width: 700px;
     margin: 0 auto 40px auto;
     font-size: 1.1rem;
-    color: #cbd5e1;
+    color: #9ca3af; /* Сірий */
 }
 
-/* Кнопка Canva */
+/* Строга кнопка Canva */
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    border-radius: 8px;
+    border-radius: 2px; /* Майже гострі кути */
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
 }
 
 .canva-btn {
-    background-color: #00c4cc; /* Фірмовий колір Canva */
+    background-color: #4c1d95; /* Глибокий фіолетовий */
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 196, 204, 0.3);
+    border-color: #5b21b6;
 }
 
 .canva-btn:hover {
-    background-color: #00a5ab;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 196, 204, 0.4);
+    background-color: #5b21b6;
+    border-color: #7c3aed;
+    /* Жорстка "технічна" тінь замість м'якого розмиття */
+    box-shadow: 4px 4px 0px rgba(124, 58, 237, 0.4); 
+    transform: translate(-2px, -2px);
 }
 
 /* Секція команди */
 .team-section {
     padding: 80px 0;
+    background-color: #09090b;
 }
 
 .section-title {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
-    color: #f8fafc;
+    color: #f3f4f6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .team-grid {
@@ -93,50 +99,60 @@ body {
 
 /* Картка учасника */
 .team-card {
-    background-color: #1e293b;
-    border-radius: 16px;
+    background-color: #121217; /* Темно-сірий */
+    border-radius: 2px; /* Гострі кути */
     padding: 30px 20px;
     text-align: center;
     width: calc(33.333% - 20px);
     min-width: 250px;
     max-width: 300px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #334155;
+    transition: all 0.2s ease;
+    border: 1px solid #2e2640; /* Строга рамка */
 }
 
 .team-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    border-color: #38bdf8;
+    border-color: #7c3aed;
+    box-shadow: 4px 4px 0px rgba(124, 58, 237, 0.2);
+    transform: translate(-2px, -2px);
 }
 
+/* Фотографії тепер строгі і квадратні */
 .member-photo {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
+    border-radius: 4px; /* Легке згладжування замість кола */
     object-fit: cover;
     margin-bottom: 20px;
-    border: 3px solid #38bdf8;
+    border: 2px solid #4c1d95;
+    filter: grayscale(30%); /* Трохи знебарвлюємо фотки для строгості */
+    transition: filter 0.3s ease;
+}
+
+.team-card:hover .member-photo {
+    filter: grayscale(0%); /* Колір повертається при наведенні */
 }
 
 .team-card h3 {
     font-size: 1.3rem;
     margin-bottom: 5px;
+    color: #e5e7eb;
 }
 
 .role {
-    color: #94a3b8;
-    font-size: 0.9rem;
+    color: #8b5cf6;
+    font-size: 0.85rem;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .social-links a {
-    color: #cbd5e1;
+    color: #6b7280;
     font-size: 1.5rem;
     margin: 0 10px;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .social-links a:hover {
-    color: #38bdf8;
+    color: #a78bfa;
 }
